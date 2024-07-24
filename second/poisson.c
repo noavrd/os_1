@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #include <tgmath.h>
 
@@ -24,7 +25,7 @@ int main(int argc, char *argv[]) {
     }
 
     // calculate the poisson probability
-    long double poisson = expl(-lambda) * power / factorial;
+    long double poisson = expf(-lambda) * power / factorial;
 
     printf("P(%d) = %.20Lf\n", k, poisson);
 
