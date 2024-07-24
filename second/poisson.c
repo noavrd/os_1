@@ -10,12 +10,14 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    // get the 2 arguments
     long double lambda = atof(argv[1]);
     int k = atoi(argv[2]);
 
+    // calculate power & factorial
     long double power = powl(lambda, k);
-
     long double factorial;
+
     if (k < 0) {
         factorial = 0;
     } else if (k == 0) {
