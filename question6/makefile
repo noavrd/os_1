@@ -14,7 +14,7 @@ clean:
 	rm -f $(TARGET)
 
 signal: $(TARGET)
-	kill -SIGUSR1 `pidof $(TARGET)`
-	kill -SIGUSR2 `pidof $(TARGET)`
-	kill -SIGINT `pidof $(TARGET)`
-	kill -SIGTERM `pidof $(TARGET)`
+	kill -USR1 `pidof $(TARGET)`
+	kill -USR2 `pidof $(TARGET)`
+	kill -INT `pidof $(TARGET)`
+	kill -TERM `pidof $(TARGET)`
