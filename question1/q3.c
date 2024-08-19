@@ -1,10 +1,15 @@
 #include <stdio.h>
+void pointers();
 
 int main() {
-
-    int *ptr ;
-    int x ;
-    x = *ptr;
-
+    
+    pointers();
     return 0;
+}
+void pointers(){
+
+    int *ptr = NULL;
+    *ptr = 10;
+    int value = *ptr;;
+    
 }
