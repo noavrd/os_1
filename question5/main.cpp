@@ -66,8 +66,18 @@ int main(int argc, char *argv[]) {
     arr.reserve(size);
     generateRandomArray(arr, size);
 
-    // שינוי לאחת מהפונקציות הבאות בהתאם לאלגוריתם הנבחר:
-    int maxSum = maxSubArraySumKadane(arr);
+    int maxSum;
+
+    #ifdef VERSION_NAIVE
+        maxSum = maxSubArraySumNaive(arr);
+    #elif defined(VERSION_IMPROVED)
+        maxSum = maxSubArraySumImproved(arr);
+    #elif defined(VERSION_KADANE)
+        maxSum = maxSubArraySumKadane(arr);
+    #else
+        std::cout << "No valid algorithm version defined." << std::endl;
+        return 1;
+    #endif
 
     std::cout << "Max Subarray Sum: " << maxSum << std::endl;
 
